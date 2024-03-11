@@ -11,7 +11,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InventorySlot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/View/InventoryView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controller/ScreenController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/View/InventorySlotView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controller/InventorySlotController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -31,6 +34,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ReadOnly/RemoveItemsFromInventoryGridResult.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InventoryGrid.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InventoryService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/View/InventorySlotView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/View/InventoryView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/View/ScreenView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controller/InventorySlotController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controller/InventoryGridController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controller/ScreenController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EntryPoint.cs" />
       </list>
     </option>
   </component>
@@ -74,7 +84,7 @@
       <option name="presentableId" value="Default" />
       <updated>1708512208183</updated>
       <workItem from="1708512209328" duration="8015000" />
-      <workItem from="1710161652283" duration="3966000" />
+      <workItem from="1710161652283" duration="7457000" />
     </task>
     <servers />
   </component>
