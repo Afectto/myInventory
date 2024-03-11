@@ -12,15 +12,20 @@
         <e p="Scripts" t="Include">
           <e p="Data" t="Include">
             <e p="InventoryGridData.cs" t="Include" />
+            <e p="InventoryListData.cs" t="Include" />
             <e p="InventorySlotData.cs" t="Include" />
           </e>
           <e p="InventoryGrid.cs" t="Include" />
           <e p="InventoryGridView.cs" t="Include" />
+          <e p="InventoryService.cs" t="Include" />
           <e p="InventorySlot.cs" t="Include" />
           <e p="ReadOnly" t="Include">
+            <e p="AddItemsToInventoryGridResult.cs" t="Include" />
             <e p="IReadOnlyInventory.cs" t="Include" />
             <e p="IReadOnlyInventoryGrid.cs" t="Include" />
+            <e p="IReadOnlyInventoryList.cs" t="Include" />
             <e p="IReadOnlyInventorySlot.cs" t="Include" />
+            <e p="RemoveItemsFromInventoryGridResult.cs" t="Include" />
           </e>
         </e>
       </e>

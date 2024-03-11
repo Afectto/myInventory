@@ -2,6 +2,7 @@
 
 public class InventoryGridView : MonoBehaviour
 {
+    [SerializeField] private GameObject slotPrefab;
     public void Setup(IReadOnlyInventoryGrid inventoryGrid)
     {
         var slots = inventoryGrid.GetSlots();
@@ -11,7 +12,6 @@ public class InventoryGridView : MonoBehaviour
             for (int j = 0; j < size.y; j++)
             {
                 var slot = slots[i, j];
-                
             }
         }
     }

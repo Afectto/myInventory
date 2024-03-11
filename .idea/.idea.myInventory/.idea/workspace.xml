@@ -7,6 +7,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/InventorySlot.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -17,10 +20,17 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/InventoryGridData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ReadOnly/IReadOnlyInventorySlot.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ReadOnly/IReadOnlyInventory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ReadOnly/IReadOnlyInventoryGrid.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InventorySlot.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/InventoryGrid.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Data/InventorySlotData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Data/InventoryListData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ReadOnly/IReadOnlyInventoryGrid.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ReadOnly/IReadOnlyInventoryList.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InventoryGridView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ReadOnly/AddItemsToInventoryGridResult.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ReadOnly/RemoveItemsFromInvetoryGridResult.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ReadOnly/RemoveItemsFromInventoryGridResult.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InventoryGrid.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InventoryService.cs" />
       </list>
     </option>
   </component>
@@ -63,7 +73,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1708512208183</updated>
-      <workItem from="1708512209328" duration="2875000" />
+      <workItem from="1708512209328" duration="8015000" />
+      <workItem from="1710161652283" duration="3966000" />
     </task>
     <servers />
   </component>
