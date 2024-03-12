@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
@@ -17,19 +15,17 @@ public class EntryPoint : MonoBehaviour
     [NotNull] private const string OWNER_1 = "Afecto_1";
     [NotNull] private const string OWNER_2 = "Afecto_2";
 
-
-    private readonly string[] _itemIds = {"Apple", "Armor", "Weapon", "Seed", "Potion"};
+    public Sprite[] _Sprites;
     
     void Start()
     {
         _inventoryService = new InventoryService();
 
-        var inventoryData_1 = CreateTestInventory(OWNER_1, 3, 4);
+        var inventoryData_1 = CreateTestInventory(OWNER_1, 2, 3);
         _inventoryService.RegisterInventory(inventoryData_1);
-
-        var inventoryData_2 = CreateTestInventory(OWNER_2, 5, 5);
+        var inventoryData_2 = CreateTestInventory(OWNER_2, 2, 3);
         _inventoryService.RegisterInventory(inventoryData_2);
-        
+
 
         _screenController = new ScreenController(_inventoryService, _screenView);
         _screenController.OpenInventory(OWNER_1);
@@ -38,32 +34,31 @@ public class EntryPoint : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
-            _screenController.OpenInventory(OWNER_1);
-            _currentOwnerId = OWNER_1;
+            _currentOwnerId = _currentOwnerId == OWNER_1 ? OWNER_2 : OWNER_1;
+            _screenController.OpenInventory(_currentOwnerId);
         }
         
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            _screenController.OpenInventory(OWNER_2);
-            _currentOwnerId = OWNER_2;
-        }
-
         if (Input.GetKeyDown(KeyCode.A))
         {
-            var rIndex = Random.Range(0, _itemIds.Length);
-            var rItemId = _itemIds[rIndex];
+            var rIndex = Random.Range(0, _Sprites.Length);
+            var rItemId = _Sprites[rIndex];
             var rAmount = Random.Range(0, 100);
-            _inventoryService.AddItemsToInventory(_currentOwnerId, rItemId, rAmount);
+            _inventoryService.AddItemsToInventory(_currentOwnerId, rItemId.name, rAmount);
         }
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            var rIndex = Random.Range(0, _itemIds.Length);
-            var rItemId = _itemIds[rIndex];
+            var rIndex = Random.Range(0, _Sprites.Length);
+            var rItemId = _Sprites[rIndex];
             var rAmount = Random.Range(0, 50);
-            _inventoryService.RemoveItems(_currentOwnerId, rItemId, rAmount);
+            _inventoryService.RemoveItems(_currentOwnerId, rItemId.name, rAmount);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            _inventoryService.CleanInventory(_currentOwnerId);
         }
     }
 
@@ -71,7 +66,7 @@ public class EntryPoint : MonoBehaviour
     {
         var size = new Vector2Int(sizeX, sizeY);
         var createdInventorySlots = new List<InventorySlotData>();
-        var length = sizeX + sizeY;
+        var length = sizeX + sizeY + 1;
 
         for (int i = 0; i < length; i++)
         {

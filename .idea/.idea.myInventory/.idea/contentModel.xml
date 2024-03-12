@@ -8,37 +8,46 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.Player.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Prefab" t="Include" />
+        <e p="Resources" t="Include">
+          <e p="Inventory" t="Include">
+            <e p="BaseBuff" t="Include" />
+          </e>
+        </e>
         <e p="Scenes" t="Include" />
         <e p="Scripts" t="Include">
-          <e p="Controller" t="Include">
-            <e p="InventoryGridController.cs" t="Include" />
-            <e p="InventorySlotController.cs" t="Include" />
-            <e p="ScreenController.cs" t="Include" />
-          </e>
           <e p="EntryPoint.cs" t="Include" />
-          <e p="Model" t="Include">
-            <e p="Data" t="Include">
-              <e p="InventoryGridData.cs" t="Include" />
-              <e p="InventoryListData.cs" t="Include" />
-              <e p="InventorySlotData.cs" t="Include" />
+          <e p="Inventory" t="Include">
+            <e p="Controller" t="Include">
+              <e p="InventoryGridController.cs" t="Include" />
+              <e p="InventorySlotController.cs" t="Include" />
+              <e p="ScreenController.cs" t="Include" />
             </e>
-            <e p="InventoryGrid.cs" t="Include" />
-            <e p="InventoryGridView.cs" t="Include" />
-            <e p="InventoryService.cs" t="Include" />
-            <e p="InventorySlot.cs" t="Include" />
-            <e p="ReadOnly" t="Include">
-              <e p="AddItemsToInventoryGridResult.cs" t="Include" />
-              <e p="IReadOnlyInventory.cs" t="Include" />
-              <e p="IReadOnlyInventoryGrid.cs" t="Include" />
-              <e p="IReadOnlyInventoryList.cs" t="Include" />
-              <e p="IReadOnlyInventorySlot.cs" t="Include" />
-              <e p="RemoveItemsFromInventoryGridResult.cs" t="Include" />
+            <e p="Model" t="Include">
+              <e p="Data" t="Include">
+                <e p="InventoryGridData.cs" t="Include" />
+                <e p="InventoryListData.cs" t="Include" />
+                <e p="InventorySlotData.cs" t="Include" />
+              </e>
+              <e p="InventoryGrid.cs" t="Include" />
+              <e p="InventoryGridView.cs" t="Include" />
+              <e p="InventoryService.cs" t="Include" />
+              <e p="InventorySlot.cs" t="Include" />
+              <e p="ReadOnly" t="Include">
+                <e p="AddItemsToInventoryGridResult.cs" t="Include" />
+                <e p="IReadOnlyInventory.cs" t="Include" />
+                <e p="IReadOnlyInventoryGrid.cs" t="Include" />
+                <e p="IReadOnlyInventoryIconSlot.cs" t="Include" />
+                <e p="IReadOnlyInventoryList.cs" t="Include" />
+                <e p="IReadOnlyInventorySlot.cs" t="Include" />
+                <e p="RemoveItemsFromInventoryGridResult.cs" t="Include" />
+              </e>
             </e>
-          </e>
-          <e p="View" t="Include">
-            <e p="InventorySlotView.cs" t="Include" />
-            <e p="InventoryView.cs" t="Include" />
-            <e p="ScreenView.cs" t="Include" />
+            <e p="View" t="Include">
+              <e p="InventorySlotView.cs" t="Include" />
+              <e p="InventoryView.cs" t="Include" />
+              <e p="ScreenView.cs" t="Include" />
+            </e>
           </e>
         </e>
       </e>
