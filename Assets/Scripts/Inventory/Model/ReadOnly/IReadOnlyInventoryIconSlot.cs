@@ -15,6 +15,6 @@ public interface IReadOnlyInventorySlot<TItem, TNumber>
     event Action<TNumber> ItemNumberChange;
     
     TItem Item { get; }
-    TNumber Number { get; }
+    TNumber Amount { get; }
     bool IsEmpty { get; }
 }

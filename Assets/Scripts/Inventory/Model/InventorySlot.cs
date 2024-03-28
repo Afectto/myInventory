@@ -3,7 +3,10 @@ using UnityEngine;
 
 public class InventorySlot : IReadOnlyInventorySlot<Sprite, int>
 {
-
+    public event Action<Sprite> ItemChange;
+    public event Action<int> ItemNumberChange;
+    private Sprite _sprite;
+    
     public string ItemId
     {
         get => _data.itemID;
@@ -30,9 +33,6 @@ public class InventorySlot : IReadOnlyInventorySlot<Sprite, int>
             }
         }}
 
-    public event Action<Sprite> ItemChange;
-    public event Action<int> ItemNumberChange;
-    private Sprite _sprite;
     public Sprite Item
     {
         get => _sprite;
@@ -41,17 +41,7 @@ public class InventorySlot : IReadOnlyInventorySlot<Sprite, int>
             _sprite = value;
         }
     }
-
-    public int Number { 
-        get => _data.amount;
-        set
-        {
-            if (_data.amount != value)
-            {
-                _data.amount = value;
-                ItemNumberChange?.Invoke(value);
-            }
-        }}
+    
     public bool IsEmpty => Amount == 0 && string.IsNullOrEmpty(ItemId);
 
     private readonly InventorySlotData _data;

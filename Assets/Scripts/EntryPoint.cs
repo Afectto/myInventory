@@ -19,14 +19,16 @@ public class EntryPoint : MonoBehaviour
     
     void Start()
     {
-        _inventoryService = new InventoryService();
-
-        var inventoryData_1 = CreateTestInventory(OWNER_1, 2, 3);
-        _inventoryService.RegisterInventory(inventoryData_1);
-        var inventoryData_2 = CreateTestInventory(OWNER_2, 2, 3);
-        _inventoryService.RegisterInventory(inventoryData_2);
-
-
+        var gameStateProvider = new GameStatePlayerPrefsProvider();
+        gameStateProvider.LoadGameState();
+        
+        _inventoryService = new InventoryService(gameStateProvider);
+        var gameState = gameStateProvider.GameState;
+        foreach (var inventoryData in gameState.Inventories)
+        {
+            _inventoryService.RegisterInventory(inventoryData);
+        }
+        
         _screenController = new ScreenController(_inventoryService, _screenView);
         _screenController.OpenInventory(OWNER_1);
         _currentOwnerId = OWNER_1;

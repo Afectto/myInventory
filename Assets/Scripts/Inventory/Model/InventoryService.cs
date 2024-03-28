@@ -4,6 +4,12 @@ using UnityEngine;
 public class InventoryService
 {
     private readonly Dictionary<string, InventoryGrid> _inventoriesMap = new Dictionary<string, InventoryGrid>();
+    private readonly IGameStateSaver _saver;
+
+    public InventoryService(IGameStateSaver saver)
+    {
+        _saver = saver;
+    }
 
     public InventoryGrid RegisterInventory(InventoryGridData inventoryGridData)
     {
@@ -15,25 +21,41 @@ public class InventoryService
     public AddItemsToInventoryGridResult AddItemsToInventory(string ownerId, string itemsId, int amount = 1)
     {
         var inventory = _inventoriesMap[ownerId];
-        return inventory.AddItem(itemsId, amount);
+        var result = inventory.AddItem(itemsId, amount);
+        
+        _saver.SaveGameState();
+        
+        return result;
     }
     public AddItemsToInventoryGridResult AddItemsToInventory(string ownerId, Vector2Int slotCoords, string itemsId, int amount = 1)
     {
         var inventory = _inventoriesMap[ownerId];
-        return inventory.AddItem(slotCoords, itemsId, amount);
+        var result =  inventory.AddItem(slotCoords, itemsId, amount);
+              
+        _saver.SaveGameState();
+        
+        return result;
     }
 
     public RemoveItemsFromInventoryGridResult RemoveItems(string ownerId, string itemsId, int amount = 1)
     {
         var inventory = _inventoriesMap[ownerId];
-        return inventory.RemoveItems(itemsId, amount);
+        var result = inventory.RemoveItems(itemsId, amount);
+        
+        _saver.SaveGameState();
+        
+        return result;
     }
 
     public RemoveItemsFromInventoryGridResult RemoveItems(string ownerId, Vector2Int slotCoords, string itemsId,
         int amount = 1)
     {
         var inventory = _inventoriesMap[ownerId];
-        return inventory.RemoveItems(slotCoords, itemsId, amount);
+        var result =  inventory.RemoveItems(slotCoords, itemsId, amount);
+              
+        _saver.SaveGameState();
+        
+        return result;
     }
 
     public void CleanInventory(string ownerId)

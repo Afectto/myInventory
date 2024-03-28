@@ -12,7 +12,7 @@ public class InventorySlotController
         slot.ItemNumberChange += onSlotItemPriceChanged;
 
         view.Icon = slot.Item;
-        view.Price = slot.Number;
+        view.Price = slot.Amount;
     }
 
     private void onSlotItemIconChange(Sprite newIconSprite)
