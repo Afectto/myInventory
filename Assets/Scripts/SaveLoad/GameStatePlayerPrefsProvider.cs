@@ -9,7 +9,8 @@ public class GameStatePlayerPrefsProvider : IGameStateProvider, IGameStateSaver
     
     public void SaveGameState()
     {
-        throw new System.NotImplementedException();
+        var json = JsonUtility.ToJson(GameState);
+        PlayerPrefs.SetString(KEY, json);
     }
 
     public void LoadGameState()

@@ -52,11 +52,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/View/InventoryView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Controller/InventoryGridController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Model/InventoryGrid.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Model/InventoryService.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EntryPoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Model/ReadOnly/IReadOnlyInventoryIconSlot.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Controller/InventorySlotController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Model/InventorySlot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EntryPoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Model/InventoryService.cs" />
       </list>
     </option>
   </component>
@@ -104,6 +104,7 @@
       <workItem from="1708512209328" duration="8015000" />
       <workItem from="1710161652283" duration="18593000" />
       <workItem from="1711555325223" duration="626000" />
+      <workItem from="1711617808398" duration="120000" />
     </task>
     <servers />
   </component>

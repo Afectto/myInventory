@@ -49,6 +49,12 @@
               <e p="ScreenView.cs" t="Include" />
             </e>
           </e>
+          <e p="SaveLoad" t="Include">
+            <e p="GameStateData.cs" t="Include" />
+            <e p="GameStatePlayerPrefsProvider.cs" t="Include" />
+            <e p="IGameStateProvider.cs" t="Include" />
+            <e p="IGameStateSaver.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="DocCodeExamples.csproj" t="IncludeRecursive" />
